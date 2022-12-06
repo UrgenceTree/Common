@@ -1,0 +1,4 @@
+Server-Decision-Tree:
+    - expose port: 8000
+Server-Data:
+    - expose port: 8002
