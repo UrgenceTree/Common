@@ -1,12 +1,12 @@
 import mongoose from "mongoose"
 
-interface IPatientInfo {
-    _id: Number
-    name: String
-    age: String
-    description: String
-    rank: Number
-    user_id: Number | undefined
+export interface IPatientInfo {
+    _id: number
+    name: string
+    age: string
+    description: string
+    rank: number
+    user_id?: number
 }
 
 export const PatientInfoSchema = new mongoose.Schema<IPatientInfo>(
@@ -42,4 +42,4 @@ export const PatientInfoSchema = new mongoose.Schema<IPatientInfo>(
     }
 )
 
-export const PatientInfoModel = mongoose.model<IPatientInfo>("PatientInfoModel", PatientInfoSchema);
+export const PatientInfoModel = mongoose.model<IPatientInfo>("PatientInfo", PatientInfoSchema);
