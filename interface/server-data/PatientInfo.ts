@@ -1,21 +1,16 @@
 import mongoose from "mongoose"
 
 export interface IPatientInfo {
-    _id: number
     name: string
     age: string
     description: string
     rank: number
     user_id?: number
+    status: boolean
 }
 
-export const PatientInfoSchema = new mongoose.Schema<IPatientInfo>(
+const PatientInfoSchema = new mongoose.Schema<IPatientInfo>(
     {
-        _id: {
-            type: Number,
-            required: true,
-            unique: true
-        },
         name: {
             type: String,
             required: true
@@ -36,6 +31,10 @@ export const PatientInfoSchema = new mongoose.Schema<IPatientInfo>(
             type: Number,
             required: false
         },
+        status: {
+            type: Boolean,
+            required: true
+        }
     },
     {
         timestamps: true
