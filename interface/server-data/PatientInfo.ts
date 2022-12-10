@@ -5,6 +5,7 @@ export interface IPatientInfo {
     age: string
     description: string
     rank: number
+    chunk: number
     user_id?: number
     status: boolean
 }
@@ -24,6 +25,10 @@ const PatientInfoSchema = new mongoose.Schema<IPatientInfo>(
             required: true
         },
         rank: {
+            type: Number,
+            required: true
+        },
+        chunk: {
             type: Number,
             required: true
         },
