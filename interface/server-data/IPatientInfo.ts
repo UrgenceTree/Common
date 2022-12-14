@@ -1,4 +1,5 @@
 export interface IPatientInfo {
+    _id: string
     name: string
     age: string
     situation: string
