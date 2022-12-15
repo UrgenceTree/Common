@@ -4,7 +4,7 @@ export interface IPatientInfo {
     age: string
     situation: string
     rank: number
-    user_id?: number
+    user_id?: string
     status: boolean
     chunk_id?: string
     telephone: string
