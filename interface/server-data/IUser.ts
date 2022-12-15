@@ -1,5 +1,5 @@
 export interface IUser {
-    _id: Number
+    _id: String
     name: String
     email: String
     status: String
